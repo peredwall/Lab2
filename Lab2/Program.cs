@@ -52,6 +52,37 @@ namespace Lab2
             return width;
         }
 
+        private static void VolumeCube()
+        {
+            double volume = (GetHeight() * GetLength() * GetWidth());
+            Console.WriteLine("Volymen av din kub är: {0}", volume);
+            Console.ReadKey();
+        }
+
+        private static void VolumeCylinder()
+        {
+            const double pi = Math.PI;
+            double volume = (GetHeight() * pi * Math.Sqrt(GetRadius()));
+            Console.WriteLine("Volymen av din cylinder är: {0}", volume);
+            Console.ReadKey();
+        }
+
+        private static void VolumeCone()
+        {
+            const double pi = Math.PI;
+            double volume = ((GetHeight() * pi * Math.Sqrt(GetRadius())) / 3);
+            Console.WriteLine("Volymen av din kon är: {0}", volume);
+            Console.ReadKey();
+        }
+
+        private static void VolumeGlobe()
+        {
+            const double pi = Math.PI;
+            double volume = ((4 * Math.Pow(GetRadius(), 3) * pi) / 3);
+            Console.WriteLine("Volymen av ditt klot är: {0}", volume);
+            Console.ReadKey();
+        }
+
 
 
         static void Main(string[] args)
